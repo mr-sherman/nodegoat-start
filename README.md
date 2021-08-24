@@ -7,7 +7,13 @@ This repository exists as a way of demonstrating how GitHub Advanced Security fi
 
 ### Learn how GHAS integrates into a typical developer workflow.  To start, fork this repository.
 
-### First, let's fix the code injection vulnerabilities.
+### Enable Code Scanning
+This repository does not have code scanning enabled.  Enable Code Scanning by going to Settings, and go to the Security and Analysis tab.  Click on the button that says "Set Up Code Scanning".  
+There will be a section called "CodeQL Analysis".  Click on the button that says "Set up this workflow".
+This will set up a GitHub Action in the file .github/workflows/codeql-analysis.yml
+You can just accept all of the default options and commit this file.  Once this file is committed and pushed to main/master, the analysis will start, and the security findings will be published to the "Security" tab of this repository.
+
+### Let's fix the code injection vulnerabilities.
   - In the "security" tab, click "Code scanning alerts", and find the Code Injection vulnerabilties.  There are three of them, but they all originate in the same file:  app/routes/contributions.js 
   - Select one, walk through the path by clicking "Show Path", and click on the file name to bring you to the line of code that is the source of the vulnerability.  
   - Change the branch to "Master" from the branch pull down list, and click the pencil icon to edit the file.  
