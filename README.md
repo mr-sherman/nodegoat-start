@@ -5,7 +5,7 @@
 This repository exists as a way of demonstrating how GitHub Advanced Security fits within a development process in GitHub.  It is not meant to be built, deployed, hacked, or used in any kind of CTF.  It is a fork of the original NodeGoat.  If you want to try to learn how to hack NodeGoat, go here:
 [ https://github.com/OWASP/NodeGoat ]
 
-### Learn how GHAS integrates into a typical developer workflow.  To start, fork this repository.
+### Learn how GHAS integrates into a typical developer workflow.  To start, fork or import or clone this repository.
 
 ### Enable Code Scanning
 This repository does not have code scanning enabled.  Enable Code Scanning by going to Settings, and go to the Security and Analysis tab.  Click on the button that says "Set Up Code Scanning".  
