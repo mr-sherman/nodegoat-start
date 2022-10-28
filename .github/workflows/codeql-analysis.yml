@@ -73,11 +73,11 @@ jobs:
     - name: Extract CSV from SARIF
       uses: mr-sherman/sarif-to-csv@v2
       with:
-         input-file: "/home/runner/work/repo-name/results/${{ matrix.language }}.sarif"
-         output-file: "/home/runner/work/repo-name/results/${{ matrix.language }}.csv"
+         input-file: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.sarif"
+         output-file: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.csv"
     - name: Upload CSV
       uses: actions/upload-artifact@v2
       with:
         name: "${{ matrix.language }}.csv"
-        path: "/home/runner/work/repo-name/results/${{ matrix.language }}.csv"
+        path: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.csv"
         
