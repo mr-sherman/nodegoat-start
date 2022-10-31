@@ -71,7 +71,7 @@ jobs:
       uses: github/codeql-action/analyze@v2
       
     - name: Extract CSV from SARIF
-      uses: mr-sherman/sarif-to-csv@v2
+      uses: mr-sherman/sarif-to-csv@fix-empty-csv
       with:
          input-file: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.sarif"
          output-file: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.csv"
