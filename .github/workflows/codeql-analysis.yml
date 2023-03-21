@@ -71,7 +71,7 @@ jobs:
       uses: github/codeql-action/analyze@v2
       
     - name: Extract CSV from SARIF
-      uses: mr-sherman/sarif-to-csv@fix-empty-csv
+      uses: mr-sherman/sarif-to-csv@v2.1
       with:
          input-file: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.sarif"
          output-file: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.csv"
@@ -80,4 +80,9 @@ jobs:
       with:
         name: "${{ matrix.language }}.csv"
         path: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.csv"
+    - name: Upload SARIF
+      uses: actions/upload-artifact@v2
+      with:
+         name: "${{ matrix.language }}.sarif"
+         path: "/home/runner/work/nodegoat-start/results/${{ matrix.language }}.sarif"
         
